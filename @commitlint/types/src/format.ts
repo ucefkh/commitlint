@@ -1,4 +1,4 @@
-import * as chalk from 'chalk';
+import type {Color, Modifiers} from 'chalk';
 import {QualifiedRules} from './load';
 import {RuleConfigSeverity} from './rules';
 
@@ -26,7 +26,7 @@ export interface FormattableReport {
 	results?: (FormattableResult & WithInput)[];
 }
 
-export type ChalkColor = typeof chalk.Color | typeof chalk.Modifiers;
+export type ChalkColor = Color | Modifiers;
 
 export interface FormatOptions {
 	color?: boolean;
